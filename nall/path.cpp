@@ -25,9 +25,7 @@ NALL_HEADER_INLINE auto program() -> string {
     return Path::real(path);
   }
   #endif
-  Dl_info info;
-  dladdr((void*)&program, &info);
-  return Path::real(info.dli_fname);
+  return "/app/bin/";
   #endif
 }
 
