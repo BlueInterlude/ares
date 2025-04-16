@@ -23,14 +23,14 @@ modules:
   - name: librashader
     buildsystem: simple
     build-options:
-    append-path: /usr/lib/sdk/rust-stable/bin
-    env:
-      CARGO_HOME: /run/build/librashader/cargo
-      build-commands:
-        - rustup --version
-        - cargo run -p librashader-build-script -- --profile optimized --stable
-        - mkdir ${FLATPAK_DEST}/lib && cp -r target/optimized/librashader.so ${FLATPAK_DEST}/lib/librashader.so
-        - mkdir -p ${FLATPAK_DEST}/include/librashader/ && cp -r include/* ${FLATPAK_DEST}/include/librashader/      
+      append-path: /usr/lib/sdk/rust-stable/bin
+      env:
+        CARGO_HOME: /run/build/librashader/cargo
+    build-commands:
+      - rustup --version
+      - cargo run -p librashader-build-script -- --profile optimized --stable
+      - mkdir ${FLATPAK_DEST}/lib && cp -r target/optimized/librashader.so ${FLATPAK_DEST}/lib/librashader.so
+      - mkdir -p ${FLATPAK_DEST}/include/librashader/ && cp -r include/* ${FLATPAK_DEST}/include/librashader/      
     sources:
       - type: archive
         archive-type: tar
