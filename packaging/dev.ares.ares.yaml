@@ -21,7 +21,7 @@ modules:
     build-options:
       append-path: /usr/lib/sdk/rust-stable/bin
       env:
-        CARGO_HOME: /run/build/ares/cargo
+        CARGO_HOME: /run/build/librashader/cargo
     build-commands:
       - cargo run -p librashader-build-script -- --profile optimized --stable
       - mkdir ${FLATPAK_DEST}/lib && cp -r target/optimized/librashader.so ${FLATPAK_DEST}/lib/librashader.so
