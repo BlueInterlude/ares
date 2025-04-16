@@ -3,8 +3,8 @@ runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.rust-stable:
-  - org.freedesktop.Sdk.Extension.llvm19:
+  - org.freedesktop.Sdk.Extension.rust-stable
+  - org.freedesktop.Sdk.Extension.llvm19
 command: ares
 rename-desktop-file: ares.desktop
 rename-icon: ares
