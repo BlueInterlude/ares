@@ -37,11 +37,11 @@ modules:
         url: https://api.github.com/repos/SnowflakePowered/librashader/tarball/librashader-v0.5.1
         sha256: 797398ab2a68ae47793a02bb5fe8b1e606e22f9ccaa8eb26e57c9ecc4aa8334c
         x-checker-data:
-      - type: json
-        url: https://api.github.com/repos/SnowflakePowered/librashader/releases/latest
-        version-query: .tag_name | sub("^v"; "")
-        timestamp-query: .published_at
-        url-query: .tarball_url 
+          type: json
+          url: https://api.github.com/repos/SnowflakePowered/librashader/releases/latest
+          version-query: .tag_name | sub("^v"; "")
+          timestamp-query: .published_at
+          url-query: .tarball_url 
       - cargo-sources.json 
   - name: slang-shaders
     make-install-args: 
